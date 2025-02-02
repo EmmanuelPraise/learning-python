@@ -1,5 +1,7 @@
-# import sys
 
+# import sys
+# import time
+# import random
 
 # print("Hello world!")
 # print("My first python program")
@@ -163,9 +165,7 @@
 # print(f"Balance after {time} year/s: ${total_amount:.2f}")
 # print(principal); print(interest_rate); print(time)
 
-# import time
-# import random
-#
+# Timer Program
 # my_time = int(input("Enter the time in seconds: "))
 # for x in range(my_time):
 #     print(x)
