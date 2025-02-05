@@ -171,3 +171,23 @@ fruits = {"Apple", "Orange", "Banana", "Coconut"}
 # print(help(fruits))  # To see more about a variable
 
 # Dictionary
+capitals = {"USA": "Washington D.C",
+            "India":"New Delhi",
+            "China": "Beijing",
+            "Russia": "Moscow"}
+# print(dir(capitals))  # To see the list of methods that can be performed on a variable
+# print(help(capitals))  # To see more about a variable
+# print(capitals.get("India"))
+#
+# if capitals.get("India"):
+#     print("That capital exists")
+# else:
+#     print("That capital doesn't exist")
+#
+# capitals.update({"Germany":"Berlin"})
+# capitals.pop("China")
+# capitals.popitem()
+# capitals.clear()
+# print(capitals)
+
+
