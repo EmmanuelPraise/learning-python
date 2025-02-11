@@ -232,3 +232,253 @@ Python has a set of built-in methods that you can use on strings.
 | translate()    | Returns a translated string                                                                   |
 | upper()        | Converts a string into upper case                                                             |
 | zfill()        | Fills the string with a specified number of 0 values at the beginning                         |
+
+---
+
+### Python Booleans
+Booleans represent one of two values: True or False.
+```python
+print(10 > 9) # True
+print(10 == 9) # False
+print(10 < 9) # False
+```
+
+Python also has many built-in functions that return a boolean value, like the isinstance() function, which can be used to determine if an object is of a certain data type:
+```python
+# Check if an object is an integer or not:
+
+x = 200
+print(isinstance(x, int))
+```
+
+---
+
+### Python Operators
+Operators are used to perform operations on variables and values.
+Python divides the operators in the following groups:
+- Arithmetic operators
+- Assignment operators
+- Comparison operators
+- Logical operators
+- Identity operators
+- Membership operators
+- Bitwise operators
+
+*Arithmetic Operators* are used with numeric values to perform common mathematical operations:
+
+| Operator | Name           | Example | Try it |
+|----------|----------------|---------|--------|
+| +        | Addition       | x + y   |        |
+| -        | Subtraction    | x - y   |        |
+| *        | Multiplication | x * y   |        |
+| /        | Division       | x / y   |        |
+| %        | Modulus        | x % y   |        |
+| **       | Exponentiation | x ** y  |        |
+| //       | Floor division | x // y  |        |
+
+*Assignment Operators* are used to assign values to variables:
+
+| Operator | Example       | Same As    | Try it   |
+|----------|---------------|------------|----------|
+| =        | x = 5         | x = 5      |          |
+| +=       | x += 3        | x = x + 3  |          |
+| -=       | x -= 3        | x = x - 3  |          |
+| *=       | x *= 3        | x = x * 3  |          |
+| /=       | x /= 3        | x = x / 3  |          |
+| %=       | x %= 3        | x = x % 3  |          |
+| //=      | x //= 3       | x = x // 3 |          |
+| **=      | x **= 3       | x = x ** 3 |          |
+| &=       | x &= 3        | x = x & 3  |          |
+|          | =             | x          | = 3      | x = x | 3   |              |
+| ^=       | x ^= 3        | x = x ^ 3  |          |
+| >>=      | x >>= 3       | x = x >> 3 |          |
+| <<=      | x <<= 3       | x = x << 3 |          |
+| :=       | print(x := 3) | x = 3      | print(x) |
+
+*Comparison Operators* are used to compare two values:
+
+| Operator | Name                      | Example | Try it |
+|----------|---------------------------|---------|--------|
+| ==       | Equal                     | x == y  |        |
+| !=       | Not equal                 | x != y  |        |
+| >        | Greater than              | x > y   |        |
+| <        | Less than                 | x < y   |        |
+| >=       | Greater than or equal to  | x >= y  |        |
+| <=       | Less than or equal to     | x <= y  |        |
+
+*Logical Operators* are used to combine conditional statements:
+
+| Operator | Description                                             | Example               |
+|----------|---------------------------------------------------------|-----------------------|
+| and      | Returns True if both statements are true                | x < 5 and  x < 10     |
+| or       | Returns True if one of the statements is true           | x < 5 or x < 4        |
+| not      | Reverse the result, returns False if the result is true | not(x < 5 and x < 10) |
+
+*Identity Operators* are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:
+
+| Operator | Description                                            | Example    |
+|----------|--------------------------------------------------------|------------|
+| is       | Returns True if both variables are the same object     | x is y     |
+| is not   | Returns True if both variables are not the same object | x is not y |
+
+*Membership Operators* are used to test if a sequence is presented in an object:
+
+| Operator | Description                                                                      | Example    |
+|----------|----------------------------------------------------------------------------------|------------|
+| in       | Returns True if a sequence with the specified value is present in the object     | x in y     |
+| not in   | Returns True if a sequence with the specified value is not present in the object | x not in y |
+
+*Bitwise Operators* are used to compare (binary) numbers:
+
+| Operator | Name                 | Description                                                                                             |
+|----------|----------------------|---------------------------------------------------------------------------------------------------------|
+| &        | AND                  | Sets each bit to 1 if both bits are 1                                                                   |
+| \|       | OR                   | Sets each bit to 1 if one of two bits is 1                                                              |
+| ^        | XOR                  | Sets each bit to 1 if only one of two bits is 1                                                         |
+| ~        | NOT                  | Inverts all the bits                                                                                    |
+| <<       | Zero fill left shift | Shift left by pushing zeros in from the right and let the leftmost                                      |
+| >>       | Signed right shift   | Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off |
+
+*Operator Precedence*
+The following table lists all operators from highest precedence to lowest.
+
+| Operator                 | Description                                                                    |
+|--------------------------|--------------------------------------------------------------------------------|
+| **                       | Exponentiation (raise to the power)                                            |
+| ~ + -                    | Complement, unary plus and minus (method names for the last two are +@ and -@) |
+| * / % //                 | Multiply, divide, modulo and floor division                                    |
+| + -                      | Addition and subtraction                                                       |
+| >> <<                    | Right and left bitwise shift                                                   |
+| &                        | Bitwise 'AND'                                                                  |
+| ^ \|                     | Bitwise exclusive `OR' and regular `OR'                                        |
+| <= < > >=                | Comparison operators                                                           |
+| <> == !=                 | Equality operators                                                             |
+| = %= /= //= -= += *= **= | Assignment operators                                                           |
+| is is not                | Identity operators                                                             |
+| in not in                | Membership operators                                                           |
+| not or and               | Logical operators                                                              |
+
+---
+
+### Python Collections
+There are four collection data types in the Python programming language:
+- List is a collection which is ordered and changeable. Allows duplicate members.
+- Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+- Set is a collection which is unordered and unindexed. No duplicate members.
+- Dictionary is a collection which is unordered, changeable and indexed. No duplicate members. 
+
+When choosing a collection type, it is useful to understand the properties of that type. Choosing the right type for a particular data set could mean retention of meaning, and, it could mean an increase in efficiency or security.
+A collection is a group of objects (data). A collection is used to store, retrieve, manipulate, and communicate aggregate data.
+Most collections are mutable. This means that the elements of a collection can be changed after the collection is created.
+
+### Python Lists
+Lists are used to store multiple items in a single variable.
+Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+```python
+this_list = ["apple", "banana", "cherry"]
+print(this_list)
+```
+
+*List Items* are ordered, changeable, and allow duplicate values.
+List items are indexed, the first item has index [0], the second item has index [1] etc.
+```python
+this_list = ["apple", "banana", "cherry"]
+print(this_list[1]) # banana
+```
+
+*Change Item Value*
+To change the value of a specific item, refer to the index number:
+```python
+this_list = ["apple", "banana", "cherry"]
+this_list[1] = "blackcurrant"
+print(this_list) # ['apple', 'blackcurrant', 'cherry']
+```
+
+*Loop Through a List*
+You can loop through the list items by using a for loop:
+```python
+this_list = ["apple", "banana", "cherry"]
+for x in this_list:
+  print(x)
+```
+
+*Check if Item Exists*
+To determine if a specified item is present in a list use the in keyword:
+```python
+this_list = ["apple", "banana", "cherry"]
+if "apple" in this_list:
+  print("Yes, 'apple' is in the fruits list")
+```
+
+*List Length*
+To determine how many items a list has, use the len() method:
+```python
+this_list = ["apple", "banana", "cherry"]
+print(len(this_list)) # 3
+```
+
+*Add Items*
+To add an item to the end of the list, use the append() method:
+```python
+this_list = ["apple", "banana", "cherry"]
+this_list.append("orange")
+print(this_list) # ['apple', 'banana', 'cherry', 'orange']
+```
+
+*Insert Items*
+To insert a list item at a specified index, use the insert() method:
+```python
+this_list = ["apple", "banana", "cherry"]
+this_list.insert(1, "orange")
+print(this_list) # ['apple', 'orange', 'banana', 'cherry']
+```
+
+*Remove Item*
+There are several methods to remove items from a list:
+- The remove() method removes the specified item.
+- The pop() method removes the specified index, (or the last item if index is not specified).
+- The del keyword removes the specified index.
+- The clear() method empties the list.
+```python
+this_list = ["apple", "banana", "cherry"]
+this_list.remove("banana")
+print(this_list) # ['apple', 'cherry']
+```
+
+*Copy a List*
+You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
+There are ways to make a copy, one way is to use the built-in List method copy().
+```python
+this_list = ["apple", "banana", "cherry"]
+my_list = this_list.copy()
+print(my_list) # ['apple', 'banana', 'cherry']
+```
+
+*Join Two Lists*
+There are several ways to join, or concatenate, two or more lists in Python.
+One of the easiest ways are by using the + operator.
+```python
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3) # ['a', 'b', 'c', 1, 2, 3]
+```
+
+*List Methods*
+Python has a set of built-in methods that you can use on lists.
+
+| Method    | Description                                                                  |
+|-----------|------------------------------------------------------------------------------|
+| append()  | Adds an element at the end of the list                                       |
+| clear()   | Removes all the elements from the list                                       |
+| copy()    | Returns a copy of the list                                                   |
+| count()   | Returns the number of elements with the specified value                      |
+| extend()  | Add the elements of a list (or any iterable), to the end of the current list |
+| index()   | Returns the index of the first element with the specified value              |
+| insert()  | Adds an element at the specified position                                    |
+| pop()     | Removes the element at the specified position                                |
+| remove()  | Removes the first item with the specified value                              |
+| reverse() | Reverses the order of the list elements                                      |
+| sort()    | Sorts the list                                                               |
+
+---
